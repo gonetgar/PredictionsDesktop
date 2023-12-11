@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<SplitPane dividerPositions="0.27008928571428575" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.page.results.ResultsPageController">
+    <items>
+        <ListView fx:id="resultsListView" onMouseClicked="#handleClickOnResult" prefHeight="200.0" prefWidth="200.0" />
+        <StackPane fx:id="resultStackPane" prefHeight="150.0" prefWidth="200.0">
+            <children>
+                <fx:include fx:id="runningResultsPage" source="running/ResultPageForRunningSimulations.fxml" />
+                <fx:include fx:id="doneResultsPage" source="done/ResultPageForDoneSimulations.fxml" />
+            </children>
+        </StackPane>
+    </items>
+</SplitPane>
